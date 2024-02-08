@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Théo LAMBINET - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/logoSio.png">
+  </head>
+  <body>
+    <!-- En-tête -->
+    <header>
+      <h1>Portfolio de compétences</h1>
+      <nav>
+        <ul>
+          <li class="categorie"><a href="index.php" class="liencat">CV</a></li>
+          <li class="categorie"><a href=competences.php class="liencat">Compétences</a></li>
+          <li class="categorie"><a href="outils.php" class="liencat">Outils</a></li>
+          <li class="categorie"><a href="projets.php" class="liencat">Projets</a></li>
+          <li class="categorie"><a href="contact.php" class="liencat">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+        
+        <main>
+            <h2>Des questions ?</h2>
+
+            <form method="POST" action="ajoutMsg.php">
+                <label>
+                    Prénom
+                    <input type="text" name="prenom" maxlength="32" required>
+                </label>
+
+                <label>
+                    NOM
+                    <input type="text" name="nom" maxlength="64" required>
+                </label>
+
+                <label id="objet">
+                    Objet de la demande
+                    <input type="text" name="objet" maxlength="32" required>
+                </label>
+
+                <label id="msg">
+                    Message
+                    <textarea name="msg" cols="50" rows="3" maxlength="256" required></textarea>
+                </label>
+
+                <input type="submit">
+            </form>
+        </main>
+
+        <footer>
+            <p>Theo LAMBINET - 2024</p>
+            <p>mail : theo.lamb@sfr.fr</p>
+          </footer>
+          
+        </body>
+      </html>
