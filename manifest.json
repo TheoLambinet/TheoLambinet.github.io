@@ -10,9 +10,9 @@
   "theme_color": "#ffffff",
   "icons": [
     {
-      "src": "img/logoSio.png",
-      "type": "image/png",
-      "sizes": "800x335"
+      "src": "img/logoSio.svg",
+      "type": "image/svg",
+      "sizes": "800x800"
     }
   ],
   "description": "L'appli PWA du portfolio",
