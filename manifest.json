@@ -1,0 +1,25 @@
+{
+  "background_color": "#ffffff",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "theolambinet.github",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "theolambinet",
+  "start_url": "/",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "img/logoSio.png",
+      "type": "image/png",
+      "sizes": "800x335"
+    }
+  ],
+  "description": "L'appli PWA du portfolio",
+  "id": "theo_lambinet_portfolio",
+  "lang": "fr",
+  "categories": [
+    "business",
+    "productivity"
+  ]
+}
