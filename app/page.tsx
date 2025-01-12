@@ -3,7 +3,8 @@ import styles from "./page.module.css";
 export default function Home() {
   return (
     <main className={styles.main}>
-      {/* présentation rapide
+      {/* faire icone tl pour favicon
+       présentation rapide
       parcours
       compétences / outils
       pour la page projet : 
