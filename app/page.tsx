@@ -10,6 +10,8 @@ export default function Home() {
       pour la page projet : 
       menu dépliant par année
       pour chaque projet, titre, descriptif, quelques images et les compétences */}
+      <p>Oui</p>
+      <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>e<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>d
     </main>
   );
 }

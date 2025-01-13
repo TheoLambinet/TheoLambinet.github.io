@@ -15,25 +15,23 @@ export default function RootLayout({
     <html lang="fr-FR">
       <body>
         <header>
-          <h1>Théo LAMBINET</h1>
-          <nav>
-            <ul>
-              <li>
-                <a href="/">Projets</a>
-              </li>
-              <li>
-                <a href="/contact">Contact ?</a>
-              </li>
-            </ul>
-          </nav>
+          <a href=""><h1>Theo LAMBINET</h1></a>
+          <a href="/projets">Projets</a>
+          <button>🌙</button>
         </header>
 
         {children}
 
         <footer>
-          <p>&copy; Théo LAMBINET - {new Date().getFullYear()}</p>
-          <p><img src="img/mail.webp"/>Contact : theo.lamb@sfr.fr</p>
-          <img src="img/linkedin.webp" alt="LinkedIn" />
+          <div>
+            <p>&copy; Théo LAMBINET - {new Date().getFullYear()}</p>
+            
+          </div>
+          <div>
+            <p><img src="img/mail.webp"/> theo.lamb@sfr.fr</p>
+            <a href="https://www.linkedin.com/in/th%C3%A9o-lambinet-60a6192b0/" target="_blank"><img src="img/linkedin.webp" alt="LinkedIn"/></a>
+            <br/>
+          </div>
         </footer>
       </body>
     </html>
