@@ -63,12 +63,14 @@ a {
 }
 
 section {
+  display: flex;
+  flex-wrap: wrap;
   position: relative;
   width: 100vw;
   padding: 1%;
 }
 
-section:last-of-type::after {
+section:not(:last-of-type)::after {
   content: "";
   position: absolute;
   left: 25%;

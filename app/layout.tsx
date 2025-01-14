@@ -18,7 +18,7 @@ export default function RootLayout({
           <a href=""><h1>Theo LAMBINET</h1></a>
           <a href="/projets">Projets</a>
           <a href="CV.pdf" target="_blank">CV</a>
-          <button><img src="img/themeSwitch.webp"/></button>
+          <button><img src="img/themeSwitch.webp" alt="thème"/></button>
         </header>
 
         {children}

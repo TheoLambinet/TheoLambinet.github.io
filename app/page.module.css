@@ -2,6 +2,23 @@
     margin-top: 5%;
 }
 
+/* Présentation */
+.presentation > h2, .presentation > h3, .presentation > p {
+    width: 70%;
+}
+
+.presentation > h3 {
+    order: 1;
+}
+
+.presentation > p {
+    font-size: 1.5vw;
+    font-style: italic;
+}
+
+.presentation > img {
+    width: 30%;
+}
 
 /* Responsive */
 @media (max-width: 768px) {
