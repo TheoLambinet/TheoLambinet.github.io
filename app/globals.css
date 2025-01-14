@@ -62,14 +62,42 @@ a {
   text-decoration: none;
 }
 
+section {
+  position: relative;
+  width: 100vw;
+  padding: 1%;
+}
+
+section:last-of-type::after {
+  content: "";
+  position: absolute;
+  left: 25%;
+  bottom: 0;
+  background-color: var(--vert);
+  height: .3vh;
+  width: 50vw;
+}
+
+h2 {
+  font-size: 2vw;
+}
+
+h3 {
+  font-size: 1.8vw;
+}
+
 /* Entête */
 header {
   display: flex;
-  gap: 1%;
+  position: fixed;
+  width: 100vw;
+  align-items: center;
+  gap: 2%;
   padding: 1%;
   background: var(--vert);
-  opacity: 0.9;
+  opacity: 0.95;
   color: var(--fond);
+  z-index: 1;
 }
 
 header h1 {
@@ -77,14 +105,41 @@ header h1 {
   font-size: 2.3vw;
 }
 
-header a {
+header>a {
   transition: 0.3s linear;
   font-size: 1.8vw;
 }
 
-header a:hover {
+header>a:hover {
   transition: 0.3s linear;
   color: var(--texte);
+}
+
+header>button {
+  display: flex;
+  position: absolute;
+  right: 1%;
+  background: var(--fond);
+  padding: 0.3%;
+  border-radius: 40%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+header>button>img {
+  width: 1.6vw;
+  transition: 0.3s;
+}
+
+header>button:hover {
+  border: 2px solid var(--texte);
+  transition: 0.3s;
+}
+
+header>button:hover img {
+  filter: invert();
+  transition: 0.3s;
 }
 
 /* Pied */
@@ -114,9 +169,25 @@ footer a>img:hover {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
+  header {
+    gap: 7%;
+  }
+
   header a, header h1, footer {
-    font-size: 7vw;
+    font-size: 6vw;
+  }
+
+  header>button {
+    padding: 1%;
+  }
+
+  header>button>img {
+    width: 5vw;
+  }
+
+  footer {
+    font-size: 6vw;
   }
 
   footer img {

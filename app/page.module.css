@@ -1,4 +1,11 @@
+.main {
+    margin-top: 5%;
+}
+
+
 /* Responsive */
 @media (max-width: 768px) {
-
+    .main {
+        margin-top: 12%;
+    }
 }
