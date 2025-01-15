@@ -70,22 +70,27 @@ section {
   padding: 1%;
 }
 
+section:not(:last-of-type) {
+  padding-bottom: 2%;
+  margin-bottom: 1%;
+}
+
 section:not(:last-of-type)::after {
   content: "";
   position: absolute;
   left: 25%;
   bottom: 0;
   background-color: var(--vert);
-  height: .3vh;
+  height: .6vh;
   width: 50vw;
 }
 
 h2 {
-  font-size: 2vw;
+  font-size: 3.5vw;
 }
 
 h3 {
-  font-size: 1.8vw;
+  font-size: 2.5vw;
 }
 
 /* Entête */
@@ -120,7 +125,7 @@ header>a:hover {
 header>button {
   display: flex;
   position: absolute;
-  right: 1%;
+  right: 1.5%;
   background: var(--fond);
   padding: 0.3%;
   border-radius: 40%;
@@ -182,10 +187,24 @@ footer a>img:hover {
 
   header>button {
     padding: 1%;
+    right: 3%;
   }
 
   header>button>img {
-    width: 5vw;
+    width: 4.5vw;
+  }
+
+  section:not(:last-of-type) {
+    padding-bottom: 3%;
+    margin-bottom: 1.5%;
+  }
+
+  h2 {
+    font-size: 8vw;
+  }
+
+  h3 {
+    font-size: 5vw;
   }
 
   footer {

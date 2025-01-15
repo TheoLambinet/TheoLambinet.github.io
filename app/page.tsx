@@ -4,9 +4,11 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <section className={styles.presentation}>
-        <h2>Théo LAMBINET</h2>
-        <h3>Je suis développeur, passionné d'informatique.</h3>
-        <p>A la recherche d'opportunités pour m'épanouir dans ce domaine.</p>
+        <div>
+          <h2>Théo LAMBINET</h2>
+          <h3>Je suis développeur, passionné d'informatique.</h3>
+          <p>A la recherche d'opportunités pour m'épanouir dans ce domaine.</p>
+        </div>
         <img src="/img/programmation.webp" alt="Illustration de programmation"/>
       </section>
 
