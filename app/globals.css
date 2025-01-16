@@ -6,21 +6,12 @@
 }
 
 /* Thème sombre */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --fond: #435966;
-    --texte: #FDF7F0;
-  }
+html[data-theme="sombre"] {
+  --fond: #435966;
+  --texte: #FDF7F0;
+  color-scheme: dark;
 
-  html {
-    color-scheme: dark;
-  }
-
-  header {
-    color: var(--fond);
-  }
-
-  footer p>img {
+  footer p > img {
     filter: invert();
   }
 }

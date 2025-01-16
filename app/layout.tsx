@@ -1,10 +1,6 @@
-import type { Metadata } from "next";
+'use client';
 import "./globals.css";
-
-export const metadata: Metadata = {
-  title: "Théo LAMBINET",
-  description: "Portfolio de Théo LAMBINET",
-};
+import { changerTheme, initTheme } from "./theme";
 
 export default function RootLayout({
   children,
@@ -12,13 +8,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr-FR">
+    <html lang="fr-FR" data-theme={initTheme()}>
+      <head>
+        <title>Théo LAMBINET</title>
+        <meta name="description" content={"Portfolio de Théo Lambinet."}/>
+      </head>
       <body>
         <header>
           <a href=""><h1>Theo LAMBINET</h1></a>
           <a href="/projets">Projets</a>
           <a href="CV.pdf" target="_blank">CV</a>
-          <button><img src="img/themeSwitch.webp" alt="thème"/></button>
+          <button onClick={() => changerTheme()}><img src="img/themeSwitch.webp" alt="thème"/></button>
         </header>
 
         {children}
@@ -29,7 +29,7 @@ export default function RootLayout({
             
           </div>
           <div>
-            <p><img src="img/mail.webp"/> theo.lamb@sfr.fr</p>
+            <p><img src="img/mail.webp" alt="Mail"/> theo.lamb@sfr.fr</p>
             <a href="https://www.linkedin.com/in/th%C3%A9o-lambinet-60a6192b0/" target="_blank"><img src="img/linkedin.webp" alt="LinkedIn"/></a>
             <br/>
           </div>
