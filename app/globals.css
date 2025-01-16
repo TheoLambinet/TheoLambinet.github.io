@@ -30,6 +30,7 @@ html[data-theme="sombre"] {
 /* Défauts */
 html,
 body {
+  transition: .3s;
   max-width: 100vw;
   overflow-x: hidden;
 }
@@ -93,7 +94,7 @@ header {
   gap: 2%;
   padding: 1%;
   background: var(--vert);
-  opacity: 0.95;
+  opacity: .95;
   color: var(--fond);
   z-index: 1;
 }
@@ -104,12 +105,12 @@ header h1 {
 }
 
 header>a {
-  transition: 0.3s linear;
+  transition: .3s linear;
   font-size: 1.8vw;
 }
 
 header>a:hover {
-  transition: 0.3s linear;
+  transition: .3s linear;
   color: var(--texte);
 }
 
@@ -122,22 +123,22 @@ header>button {
   border-radius: 40%;
   border: 2px solid transparent;
   cursor: pointer;
-  transition: 0.3s;
+  transition: .3s;
 }
 
 header>button>img {
   width: 1.6vw;
-  transition: 0.3s;
+  transition: .3s;
 }
 
 header>button:hover {
   border: 2px solid var(--texte);
-  transition: 0.3s;
+  transition: .3s;
 }
 
 header>button:hover img {
   filter: invert();
-  transition: 0.3s;
+  transition: .3s;
 }
 
 /* Pied */
@@ -148,11 +149,13 @@ footer {
   font-size: 1.6vw;
   text-align: center;
   padding: 1%;
+  transition: .1s;
   background: var(--vert);
   color: var(--fond);
 }
 
 footer img {
+  transition: 0.3s;
   width: 1.5vw;
 }
 
