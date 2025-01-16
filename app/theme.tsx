@@ -1,5 +1,5 @@
 // Changement de thème
-export const changerTheme = () => {
+export const changerTheme = () : void => {
   // Récupérer le thème actuel
   const theme = getTheme();
 

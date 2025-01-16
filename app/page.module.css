@@ -7,6 +7,10 @@
     justify-content: space-between;
 }
 
+.presentation h2 {
+    text-decoration: none;
+}
+
 .presentation > div {
     display: flex;
     flex-direction: column;
@@ -24,8 +28,70 @@
 }
 
 /* Parcours */
+.parcours {
+    justify-content: space-around;
+}
+
 .parcours > h2 {
     width: 100%;
+    margin-bottom: 8%;
+}
+
+.parcours > article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vh;
+    padding: 2%;
+    background-color: var(--texte);
+    color: var(--fond);
+    border-radius: 20px;
+}
+
+.parcours > article:hover {
+    transition: 0.3s;
+    outline: 1vh solid var(--vert);
+}
+
+.parcours > article > h3 {
+    margin-bottom: 3vh;
+    text-decoration: underline 1.2vh var(--vert);
+}
+
+.parcours > article > p {
+    font-size: 1.5vw;
+    text-align: center;
+    width: 18vw;
+}
+
+.parcours > article > p:last-of-type {
+    font-style: italic;
+}
+
+.parcours > article:first-of-type:before, .parcours > article:last-of-type:before {
+    content: "";
+    position: absolute;
+    left: 5%;
+    top: 30%;
+    width: 45vw;
+    height: 1vh;
+    background-color: var(--texte);
+    z-index: -1;
+}
+
+.parcours > article:last-of-type::before {
+    left: unset;
+    right: 5%;
+}
+
+.parcours > article::after {
+    content: "";
+    position: absolute;
+    top: 27%;
+    padding: .5%;
+    border: .7vw solid var(--vert);
+    border-radius: 50%;
+    background-color: var(--fond);
 }
 
 /* Responsive */
@@ -51,5 +117,41 @@
 
     .presentation p {
         font-size: 3vw;
+    }
+
+    .parcours {
+        flex-direction: column;
+        align-items: center;
+        gap: 5vh;
+    }
+
+    .parcours > h2 {
+        margin-bottom: 0;
+    }
+
+    .parcours > article > p {
+        font-size: 3vw;
+        width: 40vw;
+    }
+
+    .parcours > article:first-of-type:before, .parcours > article:last-of-type:before {
+        margin-left: 0;
+        margin-top: -4%;
+        top: unset;
+        left: 16%;
+        width: 1.4vw;
+        height: 53vh;
+    }
+
+    .parcours > article:last-of-type:before {
+        bottom: -1.5%;
+    }
+
+    .parcours > article::after {
+        top: unset;
+        left: 14%;
+        margin-top: 6vh;
+        padding: 1.2%;
+        border-width: 1.5vw;
     }
 }
