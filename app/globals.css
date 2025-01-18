@@ -30,7 +30,6 @@ html[data-theme="sombre"] {
 /* Défauts */
 html,
 body {
-  
   max-width: 100vw;
   overflow-x: hidden;
 }
@@ -105,17 +104,17 @@ header h1 {
   font-size: 2.3vw;
 }
 
-header>a {
+header > a {
   transition: .3s linear;
   font-size: 1.8vw;
 }
 
-header>a:hover {
+header > a:hover {
   transition: .3s linear;
   color: var(--texte);
 }
 
-header>button {
+header > button {
   display: flex;
   position: absolute;
   right: .8%;
@@ -127,17 +126,17 @@ header>button {
   transition: .3s;
 }
 
-header>button>img {
+header > button > img {
   width: 1.6vw;
   transition: .3s;
 }
 
-header>button:hover {
+header > button:hover {
   border: 2px solid var(--texte);
   transition: .3s;
 }
 
-header>button:hover img {
+header > button:hover img {
   filter: invert();
   transition: .3s;
 }
@@ -158,11 +157,11 @@ footer img {
   width: 1.5vw;
 }
 
-footer a>img {
+footer a > img {
   transition: 0.2s;
 }
 
-footer a>img:hover {
+footer a > img:hover {
   transition: 0.2s;
   scale: 1.3;
 }
@@ -177,12 +176,12 @@ footer a>img:hover {
     font-size: 6vw;
   }
 
-  header>button {
+  header > button {
     padding: 1%;
     right: 2%;
   }
 
-  header>button>img {
+  header > button > img {
     width: 4.5vw;
   }
 

@@ -83,6 +83,8 @@ export default function Home() {
           <div>
             <img src="img/nextjs.webp" alt="NextJS"/>
             <img src="img/reactNative.webp" alt="React Native"/>
+            <img src="img/nodeJS.webp" alt="Node.JS"/>
+            <img src="img/typescript.webp" alt="TypeScript"/>
           </div>
         </article>
 
@@ -104,9 +106,14 @@ export default function Home() {
           <p>Création de rapports</p>
         </article>
       </section>
+
+      <section className={styles.experiences}>
+        <h2>Expériences</h2>
+      </section>
       {/*
       Expériences professionnelles
       pour la page projet : 
+      générer programmatiquement (?) les projets, avec un tag date
       menu dépliant par année
       pour chaque projet, titre, descriptif, alternant gauche droite, quelques images et les compétences */}
     </main>
