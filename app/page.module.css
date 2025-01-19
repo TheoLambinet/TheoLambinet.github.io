@@ -33,20 +33,22 @@
 }
 
 .parcours > h2 {
-    width: 100%;
     margin-bottom: 8%;
 }
 
-.parcours > article {
+.parcours > article, .competences > article, .experiences > article {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1vh;
-    padding: 2%;
     transition: 0.3s;
     background-color: var(--texte);
     color: var(--fond);
     border-radius: 20px;
+}
+
+.parcours > article {
+    gap: 1vh;
+    padding: 2%;
 }
 
 .parcours > article:hover {
@@ -55,9 +57,7 @@
 }
 
 .parcours > article > h3 {
-    font-family: Glacial Indifference Gras;
     margin-bottom: 3vh;
-    box-shadow: inset 0 -2vh var(--vert);
 }
 
 .parcours > article > p {
@@ -97,45 +97,30 @@
 }
 
 /* Compétences */
-.competences {
+.competences, .experiences {
     gap: 5vh;
     justify-content: center;
 }
 
-.competences > h2, .competences > p {
+.competences > p, .experiences > p {
     width: 100%;
-}
-
-.competences > p {
     font-size: 1.8vw;
 }
 
 .competences > article {
-    display: flex;
     width: 17vw;
     height: 32vh;
-    flex-direction: column;
-    align-items: center;
     gap: 1.5vh;
     padding: 1vw;
-    transition: 0.3s;
-    background-color: var(--texte);
-    color: var(--fond);
-    border-radius: 20px;
 }
 
-.competences > article:hover {
+.competences > article:hover, .experiences > article:hover {
     transition: 0.3s;
     scale: 1.09;
     box-shadow: 0 0 1vh 1vh var(--vert);
 }
 
-.competences > article > h3 {
-    font-family: Glacial Indifference Gras;
-    box-shadow: inset 0 -2vh var(--vert);
-}
-
-.competences > article > img {
+.competences > article > img, .experiences > article > img {
     width: 3vw;
     height: 3vw;
     object-fit: contain;
@@ -155,17 +140,45 @@
     object-fit: contain;
 }
 
-.competences > article > p {
+.competences > article > p, .experiences > article > p {
     font-size: 1.3vw;
 }
 
+/* Expériences */
+.experiences {
+    justify-content: space-evenly;
+}
+
+.experiences > article {
+    width: 40vw;
+    gap: 3vh;
+    padding: 2vw;
+}
+
+.experiences > article:hover {
+    scale: 1.05;
+}
+
+.experiences > article > ul {
+    font-size: 1.5vw;
+    margin-top: 3vh;
+    font-style: italic;
+    text-align: center;
+    list-style: none;
+}
+
+.experiences > article > ul > li:not(:last-of-type) {
+    margin-bottom: 1vh;
+}
+
+/* Exceptions thème clair */
 html[data-theme="clair"] {
-    .parcours > article, .competences > article {
+    .parcours > article, .competences > article, .experiences > article {
         background-color: var(--vert);
         color: var(--texte);
     }
 
-    .parcours > article > h3, .competences > article > h3 {
+    .parcours > article > h3, .competences > article > h3, .experiences > article > h3 {
         box-shadow: inset 0 -2vh var(--fond);
     }
 
@@ -243,11 +256,7 @@ html[data-theme="clair"] {
         border-width: 1.5vw;
     }
 
-    .parcours > article > h3, .competences > article > h3 {
-        box-shadow: inset 0 -2.3vw var(--vert);
-    }
-
-    .competences > p {
+    .competences > p, .experiences > p {
         font-size: 4vw;
         text-align: center
     }
@@ -263,7 +272,7 @@ html[data-theme="clair"] {
         height: 8vw;
     }
 
-    .competences > article > p {
+    .competences > article > p, .experiences > article > p, .experiences > article > ul {
         font-size: 3vw;
     }
 
@@ -277,4 +286,10 @@ html[data-theme="clair"] {
         width: 6vw;
         height: 6vw;
     }
+
+    .experiences > article {
+        width: 60vw;
+    }
+
+
 }

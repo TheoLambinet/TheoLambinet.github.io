@@ -109,9 +109,53 @@ export default function Home() {
 
       <section className={styles.experiences}>
         <h2>Expériences</h2>
+        <p>Mon immersion dans le monde professionnel.</p>
+
+        <article>
+        <h3>Amphenol Air LB</h3>
+          {/* img */}
+          <p>Développeur</p>
+          <p>03/2024 - 06/2024 (12 semaines)</p>
+          <p>Stage (3ème année)</p>
+          <p>Carignan</p>
+
+          <ul>
+            <li>- Développements sur Dynamics Ax 2009</li>
+            <li>- Rapport Power BI du conditionnement</li>
+            <li>- Mise en place de matériel informatique</li>
+            <li>- Dépannage</li>
+          </ul>
+        </article>
+
+        <article>
+          <h3>Amphenol Air LB</h3>
+          {/* img */}
+          <p>Développeur</p>
+          <p>01/2023 - 02/2023 (5 semaines)</p>
+          <p>Stage (2ème année)</p>
+          <p>Carignan</p>
+
+          <ul>
+            <li>- Introduction à l'ERP Dynamics Ax 2009</li>
+            <li>- Projet d'automatisation de l'atelier assemblage de l'usine.</li>
+          </ul>
+        </article>
+
+        <article>
+          <h3>Mairie</h3>
+          {/* <img src="img/mairie.webp" alt="Mairie de Vivier-au-Court"/> */}
+          <p>Informaticien</p>
+          <p>05/2022 - 06/2022 (5 semaines)</p>
+          <p>Stage (1ère année)</p>
+          <p>Vivier-au-Court</p>
+
+          <ul>
+            <li>- Projet de programmation en introduction à C#</li>
+            <li>- Mise en place de matériel informatique pour la commune.</li>
+          </ul>
+        </article>
       </section>
       {/*
-      Expériences professionnelles
       pour la page projet : 
       générer programmatiquement (?) les projets, avec un tag date
       menu dépliant par année
