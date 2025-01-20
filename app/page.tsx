@@ -1,9 +1,9 @@
-import styles from "./page.module.css";
+import cssAccueil from "./css/page.module.css";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <section className={styles.presentation}>
+    <main className={cssAccueil.main}>
+      <section className={cssAccueil.presentation}>
         <div>
           <h2>Théo LAMBINET</h2>
           <h3>Je suis développeur, passionné d'informatique.</h3>
@@ -12,7 +12,7 @@ export default function Home() {
         <img src="/img/programmation.webp" alt="Illustration de programmation"/>
       </section>
 
-      <section className={styles.parcours}>
+      <section className={cssAccueil.parcours}>
         <h2>Parcours</h2>
 
         <article>
@@ -36,7 +36,7 @@ export default function Home() {
         </article>
       </section>
 
-      <section className={styles.competences}>
+      <section className={cssAccueil.competences}>
         <h2>Compétences</h2>
         <p>Les compétences que j'ai acquises au cours de mes études et expériences professionnelles :</p>
 
@@ -107,7 +107,7 @@ export default function Home() {
         </article>
       </section>
 
-      <section className={styles.experiences}>
+      <section className={cssAccueil.experiences}>
         <h2>Expériences</h2>
         <p>Mon immersion dans le monde professionnel.</p>
 

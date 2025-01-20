@@ -11,6 +11,11 @@
     text-decoration: none;
 }
 
+.presentation h3 {
+    font-family: Glacial Indifference;
+    box-shadow: unset;
+}
+
 .presentation > div {
     display: flex;
     flex-direction: column;

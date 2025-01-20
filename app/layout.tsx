@@ -1,5 +1,6 @@
 'use client';
-import "./globals.css";
+import Link from "next/link";
+import "./css/globals.css";
 import { changerTheme, initTheme } from "./theme";
 
 export default function RootLayout({
@@ -15,10 +16,10 @@ export default function RootLayout({
       </head>
       <body>
         <header>
-          <a href=""><h1>Theo LAMBINET</h1></a>
-          <a href="/projets">Projets</a>
+          <Link href="/"><h1>Theo LAMBINET</h1></Link>
+          <Link href="/projets">Projets</Link>
           <a href="CV.pdf" target="_blank">CV</a>
-          <button onClick={() => changerTheme()}><img src="img/themeSwitch.webp" alt="thème"/></button>
+          <button type="button" onClick={() => changerTheme()}><img src="img/themeSwitch.webp" alt="thème"/></button>
         </header>
 
         {children}
