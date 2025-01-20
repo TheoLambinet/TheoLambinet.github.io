@@ -2,7 +2,7 @@ import cssAccueil from "./css/page.module.css";
 
 export default function Home() {
   return (
-    <main className={cssAccueil.main}>
+    <main>
       <section className={cssAccueil.presentation}>
         <div>
           <h2>Théo LAMBINET</h2>

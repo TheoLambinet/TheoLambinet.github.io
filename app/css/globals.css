@@ -53,6 +53,10 @@ a {
   text-decoration: none;
 }
 
+main {
+  margin-top: 5%;
+}
+
 section {
   display: flex;
   flex-wrap: wrap;
@@ -171,8 +175,13 @@ footer a > img:hover {
 
 /* Responsive */
 @media (max-width: 1000px) {
+  main {
+    margin-top: 14%;
+  }
+
   header {
     gap: 7%;
+    padding: 3%;
   }
 
   header a, header h1, footer {
