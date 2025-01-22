@@ -1,0 +1,165 @@
+.projets {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 5vh;
+    padding: 1%;
+}
+
+.projets > section {
+    padding: 0;
+}
+
+.projets > section > h3 {
+    width: 100%;
+    background-color: var(--vert);
+    color: var(--fond);
+    box-shadow: unset;
+    padding: 1vw;
+    transition: .3s;
+    border-radius: 25px;
+}
+
+.projets > section > h3:hover {
+    cursor: pointer;
+    transition: .3s;
+    scale: 1.01;
+}
+
+.projets > section > h3 > span {
+    display: inline-block;
+    transition: 0.3s;
+    padding: .8vw;
+    margin-right: 2vw;
+    box-shadow: .3vw .3vw;
+    rotate: -45deg;
+}
+
+.projets > section[ouvert="true"] > h3 > span {
+    transition: 0.3s;
+    rotate: 45deg;
+    transform-origin: 100%;
+}
+
+.projet {
+    width: 100%;
+    display: flex;
+    padding: 1%;
+}
+
+.projet:nth-of-type(even) > aside {
+    order: 1;
+}
+
+.projet p {
+    font-size: 1.4vw;
+    padding: 1vw;
+    text-align: center;
+}
+
+.projet > aside, .projet > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    gap: 1vw;
+}
+
+.projet > aside {
+    flex-flow: column wrap;
+}
+
+.projet > aside > div {
+    display: flex;
+    width: fit-content;
+    padding: 2%;
+    gap: 1vw;
+    background-color: var(--vert);
+    border-radius: 3vw;
+}
+
+.projet > aside > div > img {
+    width: 3vw;
+    height: 3vw;
+    transition: .4s;
+    object-fit: contain;
+}
+
+.projet > aside > div > img:hover {
+    scale: 1.1;
+    transition: .2s;
+}
+
+.projet > div {
+    transform: perspective(25px);
+	transform-style: preserve-3d;
+}
+
+.projet > div > img {
+    width: 20vw;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-duration: 18s;
+
+    &:nth-child(1) {
+        animation-name: rotate-left;
+    }
+     
+    &:nth-child(2) {
+        animation-name: rotate-center;
+    }
+     
+    &:nth-child(3) {
+        animation-name: rotate-right;
+    }
+}
+
+.projet > div:hover > img {
+    animation-play-state: paused;
+}
+
+@keyframes rotate-left {
+    0%, 100% {
+        transform: translate3d(0,0,-15px);
+        filter: blur(2px);
+    }
+  
+    33.33% {
+        transform: translate3d(100%,0,5px);
+        filter: none;
+    }
+     
+    66.66% {
+        transform: translate3d(200%,0,-15px);
+    }
+  }
+  
+  @keyframes rotate-center {
+    0%, 100% {
+        transform: translate3d(0,0,5px);
+    }
+  
+    33.33% {
+        transform: translate3d(100%,0,-15px);
+        filter: blur(2px);
+    }
+     
+    66.66% {
+        transform: translate3d(-100%,0,-15px);
+    }
+  }
+  
+@keyframes rotate-right {
+    0%, 100% {
+        transform: translate3d(0,0,-15px);
+        filter: blur(2px);
+    }
+  
+    33.33% {
+        transform: translate3d(-200%,0,-15px);
+    }
+     
+    66.66% {
+        transform: translate3d(-100%,0,5px);
+        filter: none;
+    }
+}

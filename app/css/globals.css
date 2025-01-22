@@ -35,6 +35,7 @@ body {
 }
 
 body {
+  cursor: crosshair;
   color: var(--texte);
   background: var(--fond);
   font-family: Glacial Indifference, Arial, Helvetica, sans-serif;
@@ -66,18 +67,8 @@ section {
   margin-bottom: 2%;
 }
 
-section:not(:last-of-type) {
-  padding-bottom: 2%;
-}
-
-section:not(:last-of-type)::after {
-  content: "";
-  position: absolute;
-  left: 25%;
-  bottom: -2.5vh;
-  background-color: var(--vert);
-  height: 1vh;
-  width: 50vw;
+p {
+  font-size: 1.8vw;
 }
 
 h2 {
@@ -212,6 +203,10 @@ footer a > img:hover {
   h3 {
     font-size: 5vw;
     box-shadow: inset 0 -2.3vw var(--vert);
+  }
+
+  p {
+    font-size: 4vw;
   }
 
   footer {

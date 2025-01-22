@@ -1,3 +1,17 @@
+.main > section:not(:last-of-type) {
+    padding-bottom: 2%;
+}
+  
+.main > section:not(:last-of-type)::after {
+    content: "";
+    position: absolute;
+    left: 25%;
+    bottom: -2.5vh;
+    background-color: var(--vert);
+    height: 1vh;
+    width: 50vw;
+}
+
 /* Présentation */
 .presentation {
     justify-content: space-between;
@@ -106,7 +120,6 @@
 
 .competences > p, .experiences > p {
     width: 100%;
-    font-size: 1.8vw;
 }
 
 .competences > article {
@@ -213,7 +226,7 @@ html[data-theme="clair"] {
     }
 
     .presentation p {
-        font-size: 3vw;
+        font-size: 4vw;
     }
 
     .parcours {
@@ -261,7 +274,6 @@ html[data-theme="clair"] {
     }
 
     .competences > p, .experiences > p {
-        font-size: 4vw;
         text-align: center
     }
 

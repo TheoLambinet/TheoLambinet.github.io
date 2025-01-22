@@ -2,7 +2,7 @@ import cssAccueil from "./css/page.module.css";
 
 export default function Home() {
   return (
-    <main>
+    <main className={cssAccueil.main}>
       <section className={cssAccueil.presentation}>
         <div>
           <h2>Théo LAMBINET</h2>
@@ -155,11 +155,6 @@ export default function Home() {
           </ul>
         </article>
       </section>
-      {/*
-      pour la page projet : 
-      générer programmatiquement (?) les projets, avec un tag date
-      menu dépliant par année
-      pour chaque projet, titre, descriptif, alternant gauche droite, quelques images et les compétences */}
     </main>
   );
 }
