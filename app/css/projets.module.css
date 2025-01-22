@@ -7,6 +7,7 @@
 
 .projets > section {
     padding: 0;
+    gap: 5vh;
 }
 
 .projets > section > h3 {
@@ -37,17 +38,29 @@
 .projets > section[ouvert="true"] > h3 > span {
     transition: 0.3s;
     rotate: 45deg;
-    transform-origin: 100%;
+    transform-origin: 130%;
 }
 
 .projet {
-    width: 100%;
     display: flex;
-    padding: 1%;
+    position: relative;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 3%;
 }
 
 .projet:nth-of-type(even) > aside {
     order: 1;
+}
+
+.projet:not(:last-of-type)::after {
+    content: "";
+    position: absolute;
+    left: 25%;
+    bottom: -1vh;
+    background-color: var(--vert);
+    height: 1vh;
+    width: 50vw;
 }
 
 .projet p {
@@ -161,5 +174,121 @@
     66.66% {
         transform: translate3d(-100%,0,5px);
         filter: none;
+    }
+}
+
+@media (max-width: 1000px) {
+    .projets {
+        gap: 3vh;
+    }
+
+    .projets p {
+        font-size: 4.5vw;
+    }
+
+    .projets > h2 {
+        font-size: 10vw;
+    }
+
+    .projets > section {
+        gap: 3vh;
+    }
+
+    .projets > section > h3 {
+        font-size: 8vw;
+    }
+
+    .projets > section > h3 > span {
+        padding: 2.4vw;
+        box-shadow: 1vw 1vw;
+        margin-right: 5vw;
+    }
+
+    .projet {
+        flex-direction: column;
+        gap: 5vh;
+    }
+
+    .projet:not(:last-of-type) {
+        padding-bottom: 6%;
+    }
+
+    .projet:not(:last-of-type)::after {
+        bottom: -2vh;
+    }
+
+    .projet > aside, .projet > div {
+        width: 100%;
+        gap: 2.5vh;
+    }
+
+    .projet:nth-of-type(even) > aside {
+        order: unset;
+    }
+
+    .projet > aside > h3 {
+        font-size: 9vw;
+    }
+
+    .projet > aside > div {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 3vw;
+    }
+
+    .projet > aside > div > img {
+        width: 10vw;
+        height: 10vw;
+    }
+
+    .projet > div > img {
+        width: 60%;
+    }
+
+    @keyframes rotate-left {
+        0%, 100% {
+            transform: translate3d(32%,0,-15px);
+            filter: blur(2px);
+        }
+      
+        33.33% {
+            transform: translate3d(109%,0,5px);
+            filter: none;
+        }
+         
+        66.66% {
+            transform: translate3d(185%,0,-15px);
+        }
+      }
+      
+      @keyframes rotate-center {
+        0%, 100% {
+            transform: translate3d(0,0,5px);
+        }
+      
+        33.33% {
+            transform: translate3d(78%,0,-15px);
+            filter: blur(2px);
+        }
+         
+        66.66% {
+            transform: translate3d(-78%,0,-15px);
+        }
+      }
+      
+    @keyframes rotate-right {
+        0%, 100% {
+            transform: translate3d(-32%,0,-15px);
+            filter: blur(2px);
+        }
+      
+        33.33% {
+            transform: translate3d(-185%,0,-15px);
+        }
+         
+        66.66% {
+            transform: translate3d(-108%,0,5px);
+            filter: none;
+        }
     }
 }
