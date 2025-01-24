@@ -35,14 +35,18 @@
     rotate: -45deg;
 }
 
-.projets > section[ouvert="true"] > h3 > span {
+.projets > section[data-ouvert="true"] > article {
+    display: flex;
+}
+
+.projets > section[data-ouvert="true"] > h3 > span {
     transition: 0.3s;
     rotate: 45deg;
     transform-origin: 130%;
 }
 
 .projet {
-    display: flex;
+    display: none;
     position: relative;
     align-items: center;
     width: 100%;
@@ -112,6 +116,8 @@
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
     animation-duration: 18s;
+    transition: .5s;
+    border-radius: 20px;
 
     &:nth-child(1) {
         animation-name: rotate-left;
@@ -128,6 +134,7 @@
 
 .projet > div:hover > img {
     animation-play-state: paused;
+    border-radius: unset;
 }
 
 @keyframes rotate-left {
@@ -210,11 +217,11 @@
     }
 
     .projet:not(:last-of-type) {
-        padding-bottom: 6%;
+        padding-bottom: 9%;
     }
 
     .projet:not(:last-of-type)::after {
-        bottom: -2vh;
+        bottom: 0vh;
     }
 
     .projet > aside, .projet > div {
@@ -232,8 +239,11 @@
 
     .projet > aside > div {
         flex-wrap: wrap;
-        justify-content: center;
-        gap: 3vw;
+        justify-content: space-evenly;
+        max-width: 70%;
+        gap: 5vw;
+        padding: 3.5%;
+        border-radius: 10vw;
     }
 
     .projet > aside > div > img {
