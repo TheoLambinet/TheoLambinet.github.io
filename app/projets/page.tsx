@@ -4,11 +4,11 @@ import cssProjets from "../css/projets.module.css";
 export default function Projets() {
     // Change à true ou rien le statut ouvert d'une section
     const changeOuvert = (e: React.MouseEvent<HTMLElement>) : void => {
-        if (e.currentTarget.getAttribute("data-ouvert") != "true") {
-            e.currentTarget.setAttribute("data-ouvert", "true");
+        if (e.currentTarget.parentElement!.getAttribute("data-ouvert") === null) {
+            e.currentTarget.parentElement!.setAttribute("data-ouvert", "true");
         }
         else {
-            e.currentTarget.removeAttribute("data-ouvert");
+            e.currentTarget.parentElement!.removeAttribute("data-ouvert");
         }
     }
 
@@ -17,8 +17,116 @@ export default function Projets() {
             <h2>Projets</h2>
             <p>Les réalisations concrètes que j'ai effectué.</p>
 
-            <section data-ouvert="true" onClick={(e) => changeOuvert(e)}>
-                <h3><span/>2023</h3>
+            <section data-ouvert="true">
+                <h3 onClick={(e) => changeOuvert(e)}><span/>2025</h3>
+
+                <article className={cssProjets.projet}>
+                    <aside>
+                        <h3>Site personnel</h3>
+                        <p>Réalisation de ce site en guise de projet personnel.</p>
+                        <div>
+                            <img src="img/nextJS.webp" alt="Next JS"/>
+                            <img src="img/typescript.webp" alt="TS"/>
+                            <img src="img/html5.webp" alt="Html"/>
+                            <img src="img/css.webp" alt="CSS"/>
+                            <img src="img/nodeJS.webp" alt="Node JS"/>
+                            <img src="img/git.webp" alt="Git"/>
+                        </div>
+                    </aside>
+
+                    <div>
+                        <img src="img/proj/sitePerso1.webp" alt="Mon site"/>
+                        <img src="img/proj/sitePerso2.webp" alt="Mon site"/>
+                        <img src="img/proj/sitePerso3.webp" alt="Mon site"/>
+                    </div>
+                </article>
+            </section>
+
+            <section>
+                <h3 onClick={(e) => changeOuvert(e)}><span/>2024</h3>
+
+                <article className={cssProjets.projet}>
+                    <aside>
+                        <h3>RecetteApp</h3>
+                        <p>Projet personnel. Création d'une nouvelle application UWP, permettant de stocker, consulter et modifier des recettes de cuisine.</p>
+                        <div>
+                            <img src="img/csharp.webp" alt="C#"/>
+                            <img src="img/sql.webp" alt="SQL"/>
+                            <img src="img/mariaDB.webp" alt="MariaDB"/>
+                        </div>
+                    </aside>
+
+                    <div>
+                        <img src="img/proj/recette1.webp" alt="RecetteCuisine"/>
+                        <img src="img/proj/recette2.webp" alt="RecetteCuisine"/>
+                        <img src="img/proj/recette3.webp" alt="RecetteCuisine"/>
+                    </div>
+                </article>
+
+                <article className={cssProjets.projet}>
+                    <aside>
+                        <h3>Developpements ERP</h3>
+                        <p>Réalisation de plusieurs projets de développement sur AX 2009.
+                        <br/>- Automatisation des expéditions DHL
+                        <br/>- Intégration des caméras et scanneurs dans l'ERP
+                        </p>
+                        <div>
+                            <img src="img/xpp.webp" alt="AX 2009"/>
+                            <img src="img/sql.webp" alt="SQL"/>
+                        </div>
+                    </aside>
+
+                    <div>
+                        <img src="img/proj/stageLP1.webp" alt="Stage LP 2024"/>
+                        <img src="img/proj/stageLP2.webp" alt="Stage LP 2024"/>
+                        <img src="img/proj/stageLP3.webp" alt="Stage LP 2024"/>
+                    </div>
+                </article>
+
+                <article className={cssProjets.projet}>
+                    <aside>
+                        <h3>Conditionnement</h3>
+                        <p>Réalisation d'un rapport Power BI pour le conditionnement de l'usine.
+                        <br/>Objectifs : Automatisation des affichages, réduire les impressions</p>
+                        <div>
+                            <img src="img/powerbi.webp" alt="PowerBI"/>
+                            <img src="img/sql.webp" alt="SQL"/>
+                        </div>
+                    </aside>
+
+                    <div>
+                        <img src="img/proj/pbiCond1.webp" alt="Rapport conditionnement"/>
+                        <img src="img/proj/pbiCond2.webp" alt="Rapport conditionnement"/>
+                        <img src="img/proj/pbiCond3.webp" alt="Rapport conditionnement"/>
+                    </div>
+                </article>
+
+                <article className={cssProjets.projet}>
+                    <aside>
+                        <h3>URCAbsences</h3>
+                        <p>Création d'un site permettant de gérer des classes d'étudiants, des enseignants et des cours afin de contrôler les absences.
+                        <br/>Partie étudiant, enseignant et administrateur.</p>
+                        <div>
+                            <img src="img/nextJS.webp" alt="Next JS"/>
+                            <img src="img/javascript.webp" alt="JS"/>
+                            <img src="img/sql.webp" alt="SQL"/>
+                            <img src="img/html5.webp" alt="Html"/>
+                            <img src="img/mariaDB.webp" alt="MariaDB"/>
+                            <img src="img/nodeJS.webp" alt="Node JS"/>
+                            <img src="img/git.webp" alt="Git"/>
+                        </div>
+                    </aside>
+
+                    <div>
+                        <img src="img/proj/urcabsences1.webp" alt="URCAbsences"/>
+                        <img src="img/proj/urcabsences2.webp" alt="URCAbsences"/>
+                        <img src="img/proj/urcabsences3.webp" alt="URCAbsences"/>
+                    </div>
+                </article>
+            </section>
+
+            <section>
+                <h3 onClick={(e) => changeOuvert(e)}><span/>2023</h3>
 
                 <article className={cssProjets.projet}>
                     <aside>
@@ -119,8 +227,8 @@ export default function Projets() {
                 </article>
             </section>
 
-            <section onClick={(e) => changeOuvert(e)}>
-                <h3><span/>2022</h3>
+            <section>
+                <h3 onClick={(e) => changeOuvert(e)}><span/>2022</h3>
 
                 <article className={cssProjets.projet}>
                     <aside>
@@ -181,8 +289,8 @@ export default function Projets() {
                 </article>
             </section>
 
-            <section onClick={(e) => changeOuvert(e)}>
-                <h3><span/>2021</h3>
+            <section>
+                <h3 onClick={(e) => changeOuvert(e)}><span/>2021</h3>
 
                 <article className={cssProjets.projet}>
                     <aside>

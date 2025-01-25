@@ -37,6 +37,27 @@
 
 .projets > section[data-ouvert="true"] > article {
     display: flex;
+    filter: none;
+
+    &:nth-of-type(odd) {
+        left: 0;
+    }
+
+    &:nth-of-type(even) {
+        right: 0;
+    }
+
+    @starting-style {
+        filter:blur(3px);
+
+        &:nth-of-type(odd) {
+            left: -100%;
+        }
+
+        &:nth-of-type(even) {
+            right: -100%;
+        }
+    }
 }
 
 .projets > section[data-ouvert="true"] > h3 > span {
@@ -51,10 +72,20 @@
     align-items: center;
     width: 100%;
     padding-bottom: 3%;
-}
+    transition: .4s linear allow-discrete;
+    filter: blur(3px);
 
-.projet:nth-of-type(even) > aside {
-    order: 1;
+    &:nth-of-type(odd) {
+        left: -100%;
+    }
+
+    &:nth-of-type(even) {
+        right: -100%;
+    
+        > aside {
+            order: 1;
+        }
+    }
 }
 
 .projet:not(:last-of-type)::after {
@@ -181,6 +212,28 @@
     66.66% {
         transform: translate3d(-100%,0,5px);
         filter: none;
+    }
+}
+
+@keyframes depuisGauche {
+    from {
+        left: -100%;
+        filter: blur(7px);
+    }
+
+    to {
+        left: 0;
+    }
+}
+
+@keyframes depuisDroite {
+    from {
+        right: -100%;
+        filter: blur(7px);
+    }
+
+    to {
+        right: 0;
     }
 }
 
