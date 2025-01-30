@@ -1,8 +1,19 @@
+"use client";
+import { useEffect, useState } from "react";
 import cssAccueil from "./css/page.module.css";
+import { initTheme } from "./theme";
 
 export default function Home() {
+  const [theme,setTheme] = useState<string>("sombre");
+
+  useEffect(() => {
+    if (typeof(window) !== "undefined") {
+      setTheme(initTheme());
+    }
+  })
+
   return (
-    <main className={cssAccueil.main}>
+    <main className={cssAccueil.main} data-theme={theme}>
       <section className={cssAccueil.presentation}>
         <div>
           <h2>Théo LAMBINET</h2>

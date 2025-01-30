@@ -187,7 +187,7 @@
 }
 
 /* Exceptions thème clair */
-html[data-theme="clair"] {
+.main:not([data-theme="sombre"]) {
     .parcours > article, .competences > article, .experiences > article {
         background-color: var(--vert);
         color: var(--texte);

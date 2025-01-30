@@ -56,6 +56,7 @@ a {
 
 main {
   margin-top: 5%;
+  min-height: 77.1vh;
 }
 
 section {
@@ -168,6 +169,7 @@ footer a > img:hover {
 @media (max-width: 1000px) {
   main {
     margin-top: 14%;
+    min-height: 87vh;
   }
 
   header {

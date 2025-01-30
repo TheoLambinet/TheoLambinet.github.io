@@ -82,7 +82,7 @@
     &:nth-of-type(even) {
         right: -100%;
     
-        > aside {
+        & > aside {
             order: 1;
         }
     }
