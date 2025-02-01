@@ -1,6 +1,6 @@
 .main > section {
     opacity: 0;
-    transition: 2s;
+    transition: 1.5s;
 
     &:nth-of-type(odd) {
         left: -100%;
@@ -256,6 +256,10 @@
 
 /* Responsive */
 @media (max-width: 1000px) {
+    .main > section {
+        transition: 1s;
+    }
+
     .presentation {
         flex-direction: column;
         align-items: center;
