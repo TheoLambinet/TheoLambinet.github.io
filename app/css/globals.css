@@ -20,11 +20,13 @@ html[data-theme="sombre"] {
 @font-face {
   font-family: Glacial Indifference;
   src: url('/fonts/GlacialIndifference-Regular.otf');
+  font-display: swap;
 }
 
 @font-face {
   font-family: Glacial Indifference Gras;
   src: url('/fonts/GlacialIndifference-Bold.otf');
+  font-display: swap;
 }
 
 /* Défauts */

@@ -1,3 +1,28 @@
+.main > section {
+    opacity: 0;
+    transition: 2s;
+
+    &:nth-of-type(odd) {
+        left: -100%;
+    }
+
+    &:nth-of-type(even) {
+        right: -100%;
+    }
+}
+
+.visible {
+    opacity: 1 !important;
+
+    &:nth-of-type(odd) {
+        translate: 100%;
+    }
+
+    &:nth-of-type(even) {
+        translate: -100%;
+    }
+}
+
 .main > section:not(:last-of-type) {
     padding-bottom: 2%;
 }
@@ -17,6 +42,26 @@
     justify-content: space-between;
 }
 
+.presentation > figure {
+    position: absolute;
+    left: 40%;
+    top: 35%;
+    padding: 6%;
+    background-color: var(--vert);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.presentation > figure::before {
+    position: absolute;
+    content: "";
+    left: 80%;
+    bottom: 10%;
+    padding: 9%;
+    border-radius: 50%;
+    background-color: var(--texte);
+}
+
 .presentation h2 {
     text-decoration: none;
     flex: unset;
@@ -31,6 +76,7 @@
     display: flex;
     flex-direction: column;
     gap: 15%;
+    mix-blend-mode: difference;
 }
 
 .presentation p {
@@ -214,6 +260,12 @@
         flex-direction: column;
         align-items: center;
         gap: 2vh;
+    }
+
+    .presentation > figure {
+        padding: 15%;
+        top: 15%;
+        left: 69%;
     }
 
     .presentation > div {

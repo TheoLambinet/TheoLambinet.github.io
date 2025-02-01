@@ -10,11 +10,26 @@ export default function Home() {
     if (typeof(window) !== "undefined") {
       setTheme(initTheme());
     }
+
+    const sections = document.getElementsByTagName("section");
+    const revealObserver = new IntersectionObserver((objets, observeur) => {
+      objets.forEach(objet => {
+        if (objet.isIntersecting) {
+          objet.target.classList.add(cssAccueil.visible);
+          observeur.unobserve(objet.target);
+        }
+      })
+    })
+    
+    Array.from(sections).forEach(element => {
+      revealObserver.observe(element);
+    });
   })
 
   return (
     <main className={cssAccueil.main} data-theme={theme}>
       <section className={cssAccueil.presentation}>
+        <figure></figure>
         <div>
           <h2>Théo LAMBINET</h2>
           <h3>Je suis développeur, passionné d'informatique.</h3>
