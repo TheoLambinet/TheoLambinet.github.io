@@ -107,7 +107,7 @@ export default function Home() {
           <img src="img/react.webp" alt="React"/>
           <p>NextJS, React Native</p>
           <div>
-            <img src="img/nextjs.webp" alt="NextJS"/>
+            <img src="img/nextJS.webp" alt="NextJS"/>
             <img src="img/reactNative.webp" alt="React Native"/>
             <img src="img/nodeJS.webp" alt="Node.JS"/>
             <img src="img/typescript.webp" alt="TypeScript"/>
