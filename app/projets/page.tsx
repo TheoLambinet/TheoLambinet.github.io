@@ -89,7 +89,7 @@ export default function Projets() {
                         <p>Réalisation d'un rapport Power BI pour le conditionnement de l'usine.
                         <br/>Objectifs : Automatisation des affichages, réduire les impressions</p>
                         <div>
-                            <img src="img/powerbi.webp" alt="PowerBI"/>
+                            <img src="img/powerBI.webp" alt="Power BI"/>
                             <img src="img/sql.webp" alt="SQL"/>
                         </div>
                     </aside>
