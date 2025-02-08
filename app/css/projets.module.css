@@ -40,22 +40,18 @@
     filter: none;
 
     &:nth-of-type(odd) {
-        left: 0;
+        translate: 100%;
     }
 
     &:nth-of-type(even) {
-        right: 0;
+        translate: -100%;
     }
 
     @starting-style {
         filter:blur(3px);
 
-        &:nth-of-type(odd) {
-            left: -100%;
-        }
-
-        &:nth-of-type(even) {
-            right: -100%;
+        &:nth-of-type(odd), &:nth-of-type(even) {
+            translate: 0%;
         }
     }
 }
@@ -212,28 +208,6 @@
     66.66% {
         transform: translate3d(-100%,0,5px);
         filter: none;
-    }
-}
-
-@keyframes depuisGauche {
-    from {
-        left: -100%;
-        filter: blur(7px);
-    }
-
-    to {
-        left: 0;
-    }
-}
-
-@keyframes depuisDroite {
-    from {
-        right: -100%;
-        filter: blur(7px);
-    }
-
-    to {
-        right: 0;
     }
 }
 
